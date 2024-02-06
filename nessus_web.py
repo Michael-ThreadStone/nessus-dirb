@@ -55,7 +55,7 @@ for host in hosts:
 for socket in http_sockets:
     if not find(socket, https_sockets):
         print("http://" + socket)
-        http_socket = ("http://" + http_socket)
+        http_socket = ("http://" + socket)
         subprocess.run(['dirb', socket])
  
 for socket in https_sockets:
